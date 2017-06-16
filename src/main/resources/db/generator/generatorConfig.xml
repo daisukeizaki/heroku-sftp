@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <classPathEntry location="/Users/iwainoriko/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.1.1/8a0b76d763f5382d6357c412eeb14970ba4405f3/postgresql-42.1.1.jar"/>
+	<context id="PostgreSQLTable" targetRuntime="MyBatis3">
+		<jdbcConnection 
+			connectionURL="jdbc:postgresql://localhost/postgres"
+			driverClass="org.postgresql.Driver"
+			password="appirio12345"
+			userId="postgres" />
+		<javaModelGenerator 
+			targetPackage="com.example.demo.mybatis.dto" 
+			targetProject="demo/src/main/java" />
+		<sqlMapGenerator 
+			targetPackage="sqlmap" 
+			targetProject="demo/src/main/resources" />
+		<javaClientGenerator 
+			targetPackage="com.example.demo.mybatis.mapper" 
+			targetProject="demo/src/main/java" 
+			type="XMLMAPPER" />
+			
+		<table tableName="history"/>
+	</context>
+</generatorConfiguration>

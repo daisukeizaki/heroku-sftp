@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<th:block>
+		<form method="post" action="/">
+			<label>入力してください:</label><input type="text" name="name"
+				th:value="${name}" />
+			<button type="submit">送信</button>
+		</form>
+	</th:block>
+	<th:block>
+		<form method="get" action="/history">
+			<button type="submit">入力履歴を見る</button>
+		</form>
+	</th:block>
+</body>
+</html>

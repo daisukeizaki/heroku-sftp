@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<h1>History</h1>
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>INPUT TEXT</th>
+		</tr>
+		<tr th:each="history: ${histories}">
+			<td th:text="${history.id}"></td>
+			<td th:text="${history.value}"></td>
+		</tr>
+	</table>
+
+	<th:block>
+		<a th:href="@{/}">
+			<button type="button">戻る</button>
+		</a>
+	</th:block>
+</body>
+</html>
